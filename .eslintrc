@@ -1,0 +1,80 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb-base",
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "plugins": [
+    "babel",
+    "react",
+    "import",
+    "jsx-a11y",
+    "jest",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "script",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "import/ignore": [
+      "node_modules",
+      "/.git",
+      "/.vscode",
+      "\\.json$"
+    ],
+    "import/extensions": [
+      ".js",
+      ".jsx"
+    ]
+  },
+  "globals": {
+    "Promise": true,
+    "window": true,
+    "$": true,
+    "ga": true,
+    "jQuery": true,
+    "router": true,
+    "jest/globals": true,
+    "shallow": true,
+    "mount": true,
+    "render": true
+  },
+  "rules": {
+    "linebreak-style": "off",
+    "arrow-parens": "off",
+    "object-curly-newline": "off",
+    "no-mixed-operators": "off",
+    "arrow-body-style": "off",
+    "function-paren-newline": "off",
+    "no-plusplus": "off",
+    "space-before-function-paren": 0,
+    "max-len": ["error", 100, 2, { "ignoreUrls": true }],
+    "no-console": 1,
+    "no-alert": 1,
+    "no-param-reassign": "off",
+    "radix": "off", // parseInt, parseFloat и radix выключены.
+    "react/require-default-props": 1,
+    "react/forbid-prop-types": 1,
+    "react/jsx-filename-extension": ["error", { "extensions": [".js"] }], // airbnb использует .jsx
+    "prefer-destructuring": "off",
+    "react/no-find-dom-node": "off",
+    "react/no-did-mount-set-state": "off",
+    "react/no-unused-prop-types": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "jsx-a11y/anchor-is-valid": ["error", { "components": ["Link"], "specialLink": ["to"] }],
+    "jsx-a11y/label-has-for": [2, {
+      "required": {
+        "every": ["id"]
+      }
+    }], // для ошибки вложенных свойств htmlFor элементов label
+    "prettier/prettier": "error"
+  }
+}
